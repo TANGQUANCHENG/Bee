@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.directwebremoting.org/schema/spring-dwr
+    http://directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+    <dwr:configuration>
+        <dwr:convert type="bean" class="org.uk.ltd.dwr.dev.model.Address" />
+    </dwr:configuration>
+
+    <bean id="dwr_customer" class="com.org.tqc.dwr.CustomerRS">
+        <dwr:remote javascript="svDevice">
+        </dwr:remote>
+    </bean>
+
+
+    <bean id="dwr_dataPush" class="com.org.tqc.dwr.DataPush">
+        <dwr:remote javascript="dataPushDevice">
+        </dwr:remote>
+    </bean>
+
+</beans >
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.FriendShipDao">
+
+    <select id="selectFriendShip" resultType="com.org.tqc.entity.FriendShip" parameterType="map">
+        SELECT * FROM FriendShip where userId = #{userId}
+    </select>
+
+    <select id="selectAllFriendShips" resultType="com.org.tqc.entity.FriendShip">
+        SELECT * FROM FriendShip
+    </select>
+
+    <delete id="deleteFriendShip" parameterType="map">
+        DELETE FROM  FriendShip WHERE id=#{id}
+    </delete>
+
+    <insert id="addFriendShip" parameterType="map">
+        INSERT INTO FriendShip (hostId,friendId,friendGroupId,remarkName)
+        VALUES
+        (#{hostId},#{friendId},#{friendGroupId},#{remarkName})
+
+    </insert>
+</mapper>

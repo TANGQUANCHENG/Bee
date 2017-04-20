@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.ProjectFileDao">
+
+    <select id="selectProjectFileById" resultType="com.org.tqc.entity.ProjectFile" parameterType="map">
+        SELECT * FROM ProjectFile where id = #{id}
+    </select>
+    <select id="selectAllProjectFile" resultType="com.org.tqc.entity.ProjectFile">
+        SELECT * FROM ProjectFile
+    </select>
+    <insert id="addProjectFile" parameterType="map">
+        INSERT INTO ProjectFile(fileName,url,projectId,uploadManager)
+        VALUES (#{fileName},#{url},#{projectId},#{uploadManager});
+    </insert>
+    <delete id="deleteProjectFile" parameterType="map">
+        DELETE FROM ProjectFile WHERE id=#{id}
+    </delete>
+</mapper>

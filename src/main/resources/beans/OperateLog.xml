@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.OperateLogDao">
+
+    <select id="selectOperateLog" resultType="com.org.tqc.entity.OperateLog" parameterType="map">
+        SELECT * FROM operate_log where operate_id = #{id}
+
+    </select>
+    <select id="selectAllOperateLogs" resultType="com.org.tqc.entity.OperateLog">
+        SELECT * FROM operate_log limit 100,20
+    </select>
+</mapper>

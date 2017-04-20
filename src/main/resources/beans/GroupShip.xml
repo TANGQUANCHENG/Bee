@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.GroupShipDao">
+
+    <select id="selectGroupShip" resultType="com.org.tqc.entity.GroupShip" parameterType="map">
+        SELECT * FROM GroupShip where userId = #{userId}
+    </select>
+
+    <select id="selectAllGroupShips" resultType="com.org.tqc.entity.GroupShip">
+        SELECT * FROM GroupShip
+    </select>
+
+    <delete id="deleteGroupShip" parameterType="map">
+        DELETE FROM  GroupShip WHERE id=#{id}
+    </delete>
+
+    <insert id="addGroupShip" parameterType="map">
+        INSERT INTO GroupShip (groupId,userId)VALUE (#{groupId},#{userId})
+
+    </insert>
+</mapper>

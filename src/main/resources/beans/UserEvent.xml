@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.UserEventDao">
+
+    <select id="selectUserEventById" resultType="com.org.tqc.entity.UserEvent" parameterType="map">
+        SELECT * FROM userevent where id = #{id}
+    </select>
+    <select id="selectUserEventByUserId" resultType="com.org.tqc.entity.UserEvent" parameterType="map">
+        SELECT * FROM userevent where userid = #{userId}
+    </select>
+    <select id="selectAllUserEvent" resultType="com.org.tqc.entity.UserEvent" >
+        SELECT * FROM userevent
+    </select>
+    <insert id="addUserEvent" parameterType="map">
+        INSERT INTO userevent(userId,eventjson) VALUES (#{userId},#{eventJSON});
+    </insert>
+    <delete id="deleteUserEvent" parameterType="map">
+        DELETE FROM userevent WHERE id=#{id}
+    </delete>
+    <update id="updateUserEvent" parameterType="map">
+        UPDATE userevent SET eventjson=#{eventJSON} WHERE userid=#{userId}
+    </update>
+</mapper>

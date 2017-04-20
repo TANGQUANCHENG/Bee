@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.UserDao">
+
+    <select id="selectUser" resultType="com.org.tqc.entity.User" parameterType="map">
+        SELECT * FROM user_table where user_id = #{user_id}
+    </select>
+
+    <select id="selectUserByName" resultType="com.org.tqc.entity.User" parameterType="map">
+        SELECT * FROM user_table where userName = #{userName}
+    </select>
+
+    <select id="selectAllUsers" resultType="com.org.tqc.entity.User">
+        SELECT * FROM user_table
+    </select>
+    <update id="updateUser" parameterType="map">
+        update user_table SET
+        userName=#{userName},
+        password=#{password},
+        phoneNumber=#{phoneNumber},
+        avatar=#{avatar},
+        email=#{email},
+        province=#{province},
+        city=#{city},
+        address=#{address},
+        remark=#{remark}
+        WHERE user_id=#{user_id}
+    </update>
+
+    <insert id="addUser" parameterType="map">
+        INSERT INTO user_table
+        (userName,password,phoneNumber,avatar,email,province,city,address,remark)
+        VALUES (#{userName},#{password},#{phoneNumber},#{avatar},#{email},#{province},#{city},#{address},#{remark})
+    </insert>
+</mapper>

@@ -1,0 +1,54 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Bee:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Bee_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Bee/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Bee" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-fileupload-1.3" />
+          <element id="library" level="project" name="commons-io-2.0.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.9.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.11.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.13" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.13" />
+          <element id="library" level="project" name="Maven: org.tuckey:urlrewritefilter:4.0.4" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.11" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.12" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.16" />
+          <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="Bee" />
+          <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="Bee" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.1.1" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.27" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.6" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.3" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.6" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.2.6" />
+          <element id="library" level="project" name="Maven: org.directwebremoting:dwr:3.0.1-RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.2" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

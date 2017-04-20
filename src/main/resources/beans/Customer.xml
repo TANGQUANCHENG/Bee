@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.CustomerDao">
+
+    <select id="selectCustomerById" resultType="com.org.tqc.entity.Customer" parameterType="map">
+        SELECT * FROM customer where id = #{id}
+    </select>
+    <select id="selectAllCustomer" resultType="com.org.tqc.entity.Customer">
+        SELECT * FROM customer
+    </select>
+    <insert id="addCustomer" parameterType="map">
+        INSERT INTO customer(customerName,description,companyName,email,phoneNo,avatar,remark)
+        VALUES (#{customerName},#{description},#{companyName},#{email},#{phoneNo},#{avatar},#{remark});
+    </insert>
+    <delete id="deleteCustomer" parameterType="map">
+        DELETE FROM customer WHERE id=#{id}
+    </delete>
+    <update id="updateCustomer" parameterType="map">
+        update customer SET
+        customerName=#{customerName},
+        description=#{description},
+        companyName=#{companyName},
+        email=#{email},
+        phoneNo=#{phoneNo},
+        avatar=#{avatar},
+        remark=#{remark}
+        WHERE id=#{id}
+    </update>
+
+    <update id="updateCustomerStatus" parameterType="map">
+        update customer SET
+        status=#{status}
+        WHERE id=#{id}
+    </update>
+</mapper>

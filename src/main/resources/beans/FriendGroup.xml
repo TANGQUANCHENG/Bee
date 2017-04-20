@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.FriendGroupDao">
+
+    <select id="selectFriendGroup" resultType="com.org.tqc.entity.FriendGroup" parameterType="map">
+        SELECT * FROM FriendGroup where userId = #{userId}
+    </select>
+
+    <select id="selectAllFriendGroups" resultType="com.org.tqc.entity.FriendGroup">
+        SELECT * FROM FriendGroup
+    </select>
+
+    <delete id="deleteFriendGroup" parameterType="map">
+        DELETE FROM  FriendGroup WHERE id=#{id}
+    </delete>
+
+    <update id="updateFriendGroup" parameterType="map">
+        UPDATE FriendGroup
+        SET
+        FriendGroupName=#{FriendGroupName}
+        WHERE id=#{id}
+    </update>
+
+    <insert id="addFriendGroup" parameterType="map">
+        INSERT INTO FriendGroup
+        (FriendGroupName,userId,sums)
+        VALUES
+        (#{FriendGroupName},#{userId},#{sums})
+
+    </insert>
+</mapper>

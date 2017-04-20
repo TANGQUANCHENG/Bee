@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.ProjectCrewDao">
+
+    <select id="selectProjectCrew" resultType="com.org.tqc.entity.ProjectCrew" parameterType="map">
+        SELECT * FROM ProjectCrew where id = #{id}
+    </select>
+    <select id="selectAllProjectCrews" resultType="com.org.tqc.entity.ProjectCrew">
+        SELECT * FROM ProjectCrew
+    </select>
+
+    <insert id="addProjectCrew"  parameterType="map">
+        INSERT INTO ProjectCrew
+        (projectId,userId,bindTime)
+        VALUES
+        (#{projectId},#{userId},#{bindTime})
+
+    </insert>
+</mapper>

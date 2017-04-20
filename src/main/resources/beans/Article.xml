@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.org.tqc.dao.ArticleDao">
+
+    <select id="selectArticleById" resultType="com.org.tqc.entity.Article" parameterType="map">
+        SELECT * FROM article where id = #{article_id}
+    </select>
+    <select id="selectArticleByTopic" resultType="com.org.tqc.entity.Article" parameterType="map">
+        SELECT * FROM article where i = #{topicId}
+    </select>
+    <select id="selectAllArticle" resultType="com.org.tqc.entity.Article" >
+        SELECT * FROM article
+    </select>
+    <insert id="addArticle" parameterType="map">
+        INSERT INTO article(title,subtitle,content,authorId,topicId) VALUES (#{title},#{subtitle},#{content},#{authorId},#{topicId});
+    </insert>
+</mapper>
